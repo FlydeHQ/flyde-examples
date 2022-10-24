@@ -1,0 +1,73 @@
+imports:
+  "@flyde/stdlib":
+    - EachMs
+    - HtmlSpan
+    - HtmlTag
+part:
+  instances:
+    - pos:
+        x: 11.219970703125
+        y: 70.27611724853517
+      id: EachMs-41
+      inputConfig:
+        ms:
+          mode: static
+          value: 1000
+      partId: EachMs
+    - pos:
+        x: 15.73
+        y: 277.44
+      id: cl9loezoc00144666530nm53q
+      inputConfig: {}
+      part:
+        id: Inline-value-Math.random()
+        inputs: {}
+        outputs:
+          r:
+            type: any
+            delayed: false
+            optional: false
+        fnCode: outputs.r.next((Math.random()))
+        customViewCode: Math.random()
+        dataBuilderSource: TWF0aC5yYW5kb20oKQ==
+        templateType: value
+        completionOutputs:
+          - r
+        defaultStyle:
+          size: small
+          icon: code
+          cssOverride:
+            fontFamily: monospace
+            fontWeight: "300"
+  connections:
+    - from:
+        insId: cl9loezoc00144666530nm53q
+        pinId: r
+      to:
+        insId: __this
+        pinId: jsx
+    - from:
+        insId: EachMs-41
+        pinId: r
+      to:
+        insId: cl9loezoc00144666530nm53q
+        pinId: __trigger
+  id: CountersList
+  inputs: {}
+  outputs:
+    jsx:
+      type: any
+      optional: false
+      delayed: false
+    value:
+      type: any
+      optional: false
+      delayed: false
+  inputsPosition: {}
+  outputsPosition:
+    jsx:
+      x: -50
+      y: 500
+    value:
+      x: 150
+      y: 500
